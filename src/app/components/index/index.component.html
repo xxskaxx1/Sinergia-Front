@@ -1,0 +1,38 @@
+<div class="container">
+  <h3 class="mt-3">Persona</h3>
+  <hr>
+  <div class="row">
+    <div class="col-md-4 offset-8">
+      <form (ngSubmit)="buscar()" [formGroup]="formConsulta">
+        <input type="number" formControlName="consecutivo" class="m-3">
+        <button class="btn btn-primary">Buscar:</button>
+      </form>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th>Nit</th>
+          <th>Nombre</th>
+          <th>Consecutivo</th>
+          <th>Estado</th>
+          <th>Codigo persona</th>
+          <th>Cantidad personal</th>
+          <th>Categoria</th>
+          <th>Presupuesto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td class="text-center">{{persona.nit}}</td>
+        <td class="text-center">{{persona.nombre}}</td>
+        <td class="text-center">{{persona.consecutivo}}</td>
+        <td class="text-center">{{persona.estado}}</td>
+        <td class="text-center">{{persona.cod_personal}}</td>
+        <td class="text-center">{{persona.cantidad_personal}}</td>
+        <td class="text-center">{{persona.categoria}}</td>
+        <td class="text-center">{{persona.presupuesto}}</td>
+      </tbody>
+    </table>
+  </div>
+</div>
